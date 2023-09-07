@@ -94,3 +94,29 @@ if (a >= 90) {
 }
 
 console.log(obj.size);
+
+let i;
+
+switch (obj.size) {
+    case('big'):
+    i = 1000;
+     break;
+    case('small'):
+    i = 10;
+     break;
+    case('medium'):
+    i = 100;
+     break;
+}
+
+let m = a*b*c*i;
+console.log(m);
+if ((m%2) !== 0) {
+    console.log('Якесь повідомлення!')
+}
+else if (b>50) {
+    alert(`Ваше друге число: ${b}`)
+}
+else{
+    console.log('Phel')
+}
