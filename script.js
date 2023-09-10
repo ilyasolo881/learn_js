@@ -134,7 +134,49 @@
 // Вивести всі числа в діапазоні від 100 до 200 кратні 3.
 // Дане ціле число. З'ясувати, чи є воно простим (простим називається число, більше 1, які не мають інших дільників крім 1 і себе).
 
+let i;
+let arr = [];
+for (i = 10;i <= 20; i++){
+    arr.push(i);
+}
+console.log(arr);
 
-for (let i = 10;i <= 20; i++){
-    console.log = (i + ', ');
+arr = [];
+for (i = 10; i <= 20; i++){
+    arr.push(i**2);
+}
+console.log(arr);
+
+let count = 1;
+for (i = 15; i <=35; i++){
+    count = count * i;
+}
+console.log(count);
+
+count = 0
+for (i = 1; i <=500; i++){
+    count = count + i;
+}
+console.log(count/500);
+
+count = 0;
+for (i = 30; i<=80; i++){
+    if (i % 2 == 0) {
+        count = count + i
+    }
+}
+console.log(count);
+
+arr = [];
+for (i = 100; i <= 200; i++){
+    if (i % 3 == 0){
+        arr.push(i);
+    }
+}
+console.log(arr)
+
+let a = prompt('Введіть будь-яке число: ', );
+a = Number(a);
+if (a % a== 0 && a ){
+    
 }
