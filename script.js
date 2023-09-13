@@ -206,12 +206,46 @@
 // Знайти суму парних позитивних елементів.
 // Знайти суму непарних позитивних елементів.
 // Знайти добуток позитивних елементів.
-// Знайти найбільший серед елементів масиву, ост альні обнулити.
-
-let arr = [16,-37,54,-4,72,-56,47,4, -16,25,-37,46,4,-51,27,-63,4,-54,76,-4,12,-35,4,47];
+// Знайти найбільший серед елементів масиву, інші обнулити.
+    
+let arr = [16,-37,54,-4,72,-56,47,4,-16,25,-37,46,4,-51,27,-63,4,-54,76,-4,12,-35,4,47];
 let result = arr.reduce((sum, current) => sum + current);
 console.log (result);
-
-for (let item of arr){
-    (item < 0)?:;
+let count = 0
+for (let number of arr){
+    if (number > 0) {
+        count += 1
+    }   
 }
+console.log(count)
+
+
+let max = 0
+let index
+for (let i = 0; i < arr.length; i++){
+    if (arr[i] > max){
+        max = arr[i]
+        index = i
+    }   
+}
+console.log(max)
+console.log(index)
+
+
+let min = 0
+for (let i = 0; i < arr.length; i++){
+    if (arr[i] < min){
+        min = arr[i]
+        index = i
+    }   
+}
+console.log(min)
+console.log(index)
+
+arr = 1
+console.log(arr)
+
+// console.log(Math.max([20,-20,304,0,293]))
+// console.log(Math.max([10, 20]));
+// let arr_max = Math.min.apply(null,arr)
+// console.log(arr_max)
