@@ -207,22 +207,25 @@
 // Знайти суму непарних позитивних елементів.
 // Знайти добуток позитивних елементів.
 // Знайти найбільший серед елементів масиву, інші обнулити.
-    
+// ------------------------------------------
 let arr = [16,-37,54,-4,72,-56,47,4,-16,25,-37,46,4,-51,27,-63,4,-54,76,-4,12,-35,4,47];
-let result = arr.reduce((sum, current) => sum + current);
-console.log (result);
+// let result = arr.reduce((sum, current) => sum + current);
+// console.log (result);
+let sum = 0
 let count = 0
 for (let number of arr){
     if (number > 0) {
         count += 1
+        sum += number
     }   
 }
 console.log(count)
-
-
+console.log(sum)
+// ------------------------------------------
+let i 
 let max = 0
 let index
-for (let i = 0; i < arr.length; i++){
+for (i = 0; i < arr.length; i++){
     if (arr[i] > max){
         max = arr[i]
         index = i
@@ -230,10 +233,9 @@ for (let i = 0; i < arr.length; i++){
 }
 console.log(max)
 console.log(index)
-
-
+// ------------------------------------------
 let min = 0
-for (let i = 0; i < arr.length; i++){
+for (i = 0; i < arr.length; i++){
     if (arr[i] < min){
         min = arr[i]
         index = i
@@ -241,8 +243,76 @@ for (let i = 0; i < arr.length; i++){
 }
 console.log(min)
 console.log(index)
+// ------------------------------------------
+count = 0
+for (number of arr){
+    if (number < 0){
+        count += 1
+    }
+}
+console.log(count)
+// ------------------------------------------
+count = 0
+for (number of arr){
+    if(number > 0 && number % 2 !== 0){
+        count += 1
+    }
+}
+console.log(count)
+// ------------------------------------------
+count = 0
+for (number of arr){
+    if(number > 0 && number % 2 == 0){
+        count += 1
+    }
+}
+console.log(count)
+// ------------------------------------------
+sum = 0
+for (number of arr){
+    if(number > 0 && number % 2 == 0){
+        sum += number
+    }
+}
+console.log(sum)
+// ------------------------------------------
+sum = 0
+for (number of arr){
+    if(number > 0 && number % 2 !== 0){
+        sum += number
+    }
+}
+console.log(sum)
+// ------------------------------------------
 
-arr = 1
+sum = 1
+for (number of arr){
+    if(number > 0){
+        sum *= number
+    }
+}
+console.log(sum)
+// ------------------------------------------
+// Знайти найбільший серед елементів масиву, інші обнулити.
+max = 0
+index = 0
+for (i = 0; i < arr.length; i++){   
+    if(arr[i] > max){
+        max = arr[i]
+        index = i
+        
+    }
+}
+i = 0
+console.log(i)
+console.log(index)
+for (i = 0; i < arr.length; i++){
+    if(i < index && i > index){
+        number = 0
+    }
+}
+console.log(max)
+console.log(index)
 console.log(arr)
 
 // console.log(Math.max([20,-20,304,0,293]))
