@@ -207,115 +207,173 @@
 // Знайти суму непарних позитивних елементів.
 // Знайти добуток позитивних елементів.
 // Знайти найбільший серед елементів масиву, інші обнулити.
-// ------------------------------------------
-let arr = [16,-37,54,-4,72,-56,47,4,-16,25,-37,46,4,-51,27,-63,4,-54,76,-4,12,-35,4,47];
-// let result = arr.reduce((sum, current) => sum + current);
-// console.log (result);
-let sum = 0
-let count = 0
-for (let number of arr){
-    if (number > 0) {
-        count += 1
-        sum += number
-    }   
-}
-console.log(count)
-console.log(sum)
-// ------------------------------------------
-let i 
-let max = 0
-let index
-for (i = 0; i < arr.length; i++){
-    if (arr[i] > max){
-        max = arr[i]
-        index = i
-    }   
-}
-console.log(max)
-console.log(index)
-// ------------------------------------------
-let min = 0
-for (i = 0; i < arr.length; i++){
-    if (arr[i] < min){
-        min = arr[i]
-        index = i
-    }   
-}
-console.log(min)
-console.log(index)
-// ------------------------------------------
-count = 0
-for (number of arr){
-    if (number < 0){
-        count += 1
-    }
-}
-console.log(count)
-// ------------------------------------------
-count = 0
-for (number of arr){
-    if(number > 0 && number % 2 !== 0){
-        count += 1
-    }
-}
-console.log(count)
-// ------------------------------------------
-count = 0
-for (number of arr){
-    if(number > 0 && number % 2 == 0){
-        count += 1
-    }
-}
-console.log(count)
-// ------------------------------------------
-sum = 0
-for (number of arr){
-    if(number > 0 && number % 2 == 0){
-        sum += number
-    }
-}
-console.log(sum)
-// ------------------------------------------
-sum = 0
-for (number of arr){
-    if(number > 0 && number % 2 !== 0){
-        sum += number
-    }
-}
-console.log(sum)
+// // ------------------------------------------
+// let arr = [16,-37,54,-4,72,-56,47,4,-16,25,-37,46,4,-51,27,-63,4,-54,76,-4,12,-35,4,47];
+// // let result = arr.reduce((sum, current) => sum + current);
+// // console.log (result);
+// let sum = 0
+// let count = 0
+// for (let number of arr){
+//     if (number > 0) {
+//         count += 1
+//         sum += number
+//     }   
+// }
+// console.log(count)
+// console.log(sum)
+// // ------------------------------------------
+// let i 
+// let max = 0
+// let index
+// for (i = 0; i < arr.length; i++){
+//     if (arr[i] > max){
+//         max = arr[i]
+//         index = i
+//     }   
+// }
+// console.log(max)
+// console.log(index)
+// // ------------------------------------------
+// let min = 0
+// for (i = 0; i < arr.length; i++){
+//     if (arr[i] < min){
+//         min = arr[i]
+//         index = i
+//     }   
+// }
+// console.log(min)
+// console.log(index)
+// // ------------------------------------------
+// count = 0
+// for (number of arr){
+//     if (number < 0){
+//         count += 1
+//     }
+// }
+// console.log(count)
+// // ------------------------------------------
+// count = 0
+// for (number of arr){
+//     if(number > 0 && number % 2 !== 0){
+//         count += 1
+//     }
+// }
+// console.log(count)
+// // ------------------------------------------
+// count = 0
+// for (number of arr){
+//     if(number > 0 && number % 2 == 0){
+//         count += 1
+//     }
+// }
+// console.log(count)
+// // ------------------------------------------
+// sum = 0
+// for (number of arr){
+//     if(number > 0 && number % 2 == 0){
+//         sum += number
+//     }
+// }
+// console.log(sum)
+// // ------------------------------------------
+// sum = 0
+// for (number of arr){
+//     if(number > 0 && number % 2 !== 0){
+//         sum += number
+//     }
+// }
+// console.log(sum)
+// // ------------------------------------------
+// sum = 1
+// for (number of arr){
+//     if(number > 0){
+//         sum *= number
+//     }
+// }
+// console.log(sum)
+// // ------------------------------------------
+// // Знайти найбільший серед елементів масиву, інші обнулити.
+// max = 0
+// index = 0
+// for (i = 0; i < arr.length; i++){
+//     if(arr[i] > max){
+//         max = arr[i]
+//         index = i
+//     }
+// }
+// console.log(i)
+// console.log(index)
+// for (i = 0; i < arr.length; i++){
+//     if(i < index || i > index){
+//         arr[i] = 0
+//     }
+// }
+// // arr.splice(0, index - 1)
+// // arr.splice(index + 1)
+// // console.log(Math.max([20,-20,304,0,293]))
+// // console.log(Math.max([10, 20]));
+// // let arr_max = Math.min.apply(null,arr)
+// // console.log(arr_max)
+// console.log(max)
+// console.log(index)
+// console.log(arr)
 // ------------------------------------------
 
-sum = 1
-for (number of arr){
-    if(number > 0){
-        sum *= number
-    }
-}
-console.log(sum)
-// ------------------------------------------
-// Знайти найбільший серед елементів масиву, інші обнулити.
-max = 0
-index = 0
-for (i = 0; i < arr.length; i++){   
-    if(arr[i] > max){
-        max = arr[i]
-        index = i
-        
-    }
-}
-i = 0
-console.log(i)
-console.log(index)
-for (i = 0; i < arr.length; i++){
-    if(i < index && i > index){
-        number = 0
-    }
-}
-console.log(max)
-console.log(index)
-console.log(arr)
+// Задача 6
 
-// console.log(Math.max([20,-20,304,0,293]))
-// console.log(Math.max([10, 20]));
-// let arr_max = Math.min.apply(null,arr)
-// console.log(arr_max)
+// 1)Реалізуйте функцію removeElement(array, item), щоб видалити елемент item з масиву array.
+// Наприклад:
+// const array = [1, 2, 3, 4, 5, 6, 7];
+// removeElement(array, 5 );
+// console.log(array);
+
+// Результат: [1, 2, 3, 4, 6, 7]
+// ------------------------------------------
+// 2)Реалізуйте функцію generateKey(length, characters), 
+// яка повертає рядок випадкових символів із набору characters довжиною length. span>
+// Наприклад:
+// const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
+// const key = generateKey(16, characters);
+// console.log(key); // eg599gb60q926j8i
+// ------------------------------------------
+// 3)Створити функцію, яка прибирає з рядка всі символи, які ми передали другим аргументом.
+// 'func("hello world", ['l', 'd'])' поверне нам "heo wor". Вихідний рядок та символи для видалення задає користувач.
+// ------------------------------------------
+// 4)Написати функцію, яка приймає 1 параметр. з тим, що передали перший раз і т. д. Все це із замиканнями, наприклад:
+// Первый вызов
+// ﻿sum(3) = 3 
+// Второй вызов
+// sum(5) = 8
+// Третий вызов
+// sum(20) = 28
+// ------------------------------------------
+// const arr = [1, 2, 3, 4, 5, 6, 7];
+// function removeArrElement(array, item){
+//   array.splice(array.indexOf(item), 1);
+//   return array;
+// }
+// console.log(removeArrElement(arr, 3))
+// ------------------------------------------
+
+// ------------------------------------------
+let str = "hello world"; 
+let letters = 'wl'
+// function delLetters(string, letter){
+//     for (let i = 0; i <= string.lenght; i++){
+//         string.splice(letter.indexOf(i), 1);
+//     }
+//     return string
+// }
+// console.log(delLetters(str,letters));
+let strToArr = str.split('');
+let lettersToArr = letters.split('');
+console.log(lettersToArr);
+console.log(strToArr);
+for (let i = 0; i <= lettersToArr.length; i++){
+    for (let j = 0; j <= strToArr.length; j++){
+        if(strToArr[j] === lettersToArr[i]){
+            strToArr.splice(j,1);
+        }
+    }
+}
+console.log(strToArr);
