@@ -464,8 +464,29 @@ let users = [
     "address": "314 Dunne Place, Bawcomville, Guam, 9053"
     }
     ]
-for(let key in users){
-    if (key == balance && users.balance >= 2000 ){
-
+balanceSum = 0
+needNumbr = [];
+for (let indx in users){
+    if (Number((users[indx].balance)
+        .replace(/[$\,]/g,"")) >= 2000) {
+        needNumbr.push(users[indx].phone)
     }
+    balanceSum += Number((users[indx].balance).replace(/[$\,]/g,""))
 }
+console.log(needNumbr)
+console.log(balanceSum)
+// let str = "$Этот, текст, с, запятими"
+// str = str.replace(/,/g,"")
+// str = str.replace(/[$]/g,"")
+// console.log(str)
+// обратиться через цикл к масиву, обратиться и скопировать данные, задать условие и занести в новый масив, вывести.
+// обратиться через цикл к масиву, обратиться и убрать с помощью легурярных выражений $ и ,. посчитать общую сумму и вывести. 
+// func(count,min,max) - генерує масив довільною довжиною (count), і задається діапазон для рандому чисел від min до max 
+// + вводить параметри користувач + робить сортування
+
+
+
+
+
+// func(3*,5*,100*) 
+// [50,35,90]
