@@ -347,6 +347,7 @@
 // Третий вызов
 // sum(20) = 28
 // ------------------------------------------
+// 1)
 // const arr = [1, 2, 3, 4, 5, 6, 7];
 // function removeArrElement(array, item){
 //   array.splice(array.indexOf(item), 1);
@@ -354,26 +355,117 @@
 // }
 // console.log(removeArrElement(arr, 3))
 // ------------------------------------------
-
-// ------------------------------------------
-let str = "hello world"; 
-let letters = 'wl'
-// function delLetters(string, letter){
-//     for (let i = 0; i <= string.lenght; i++){
-//         string.splice(letter.indexOf(i), 1);
+// 2)
+// let newSample = '';
+// const sample = 'abcdefghijklmnopqrstuvwxyz0123456789';
+// function generateKey(amount, string){
+//     for (let i = 0; i < amount; i++){
+//         newSample += string[getRandom(0, string.length - 1)]; 
 //     }
-//     return string
+//     return newSample 
 // }
-// console.log(delLetters(str,letters));
-let strToArr = str.split('');
-let lettersToArr = letters.split('');
-console.log(lettersToArr);
-console.log(strToArr);
-for (let i = 0; i <= lettersToArr.length; i++){
-    for (let j = 0; j <= strToArr.length; j++){
-        if(strToArr[j] === lettersToArr[i]){
-            strToArr.splice(j,1);
-        }
+// function getRandom(min, max) {
+// 	return Math.floor(Math.random() * max - min + 1) + min;
+// }
+// console.log(generateKey(10,sample));
+// ------------------------------------------
+// 3)
+// let str = "hello world";
+// let letters = prompt('Введіть літери, що потрібно видалити для рядка "hello world": ')
+// let strToArr = str.split('');
+// let lettersToArr = letters.split('');
+// console.log(lettersToArr);
+// console.log(strToArr);
+// for (let i = 0; i <= lettersToArr.length - 1; i++){
+//     for (let j = 0; j <= strToArr.length - 1; j++){
+//         if(strToArr[j] === lettersToArr[i]){
+//             strToArr.splice(j,1);
+//             j--
+//         }
+//     }
+// }
+// console.log(strToArr);
+// alert(strToArr);
+// ------------------------------------------
+// 4) 
+// function summing(n){
+//    return function (num){
+//         return console.log(n = n + num)
+//     }
+// }
+// let sum = summing(0) 
+// sum(3)
+// sum(5)
+// sum(2)
+// sum(5)
+// // console.log(sum(10))
+// // console.log(sum(Number(prompt('Введіть одне число: '))))
+// ------------------------------------------
+
+// Задача 7
+
+// Дан масив об'єктів. 
+// Вивести масив телефонних номерів користувачів, у яких баланс більше 2000 доларів. 
+// І знайти суму всіх балансів користувачів
+
+let users = [
+    {
+    "index": 0,
+    "isActive": true,
+    "balance": "$2,226.60",
+    "name": "Eugenia Sawyer",
+    "gender": "female",
+    "phone": "+1 (840) 583-3207",
+    "address": "949 John Street, Rose, Puerto Rico, 1857"
+    },
+    {
+    "index": 1,
+    "isActive": true,
+    "balance": "$2,613.77",
+    "name": "Pauline Gallegos",
+    "gender": "female",
+    "phone": "+1 (985) 593-3328",
+    "address": "328 Greenpoint Avenue, Torboy, North Dakota, 6857"
+    },
+    {
+    "index": 2,
+    "isActive": false,
+    "balance": "$3,976.41",
+    "name": "Middleton Chaney",
+    "gender": "male",
+    "phone": "+1 (995) 591-2478",
+    "address": "807 Fleet Walk, Brutus, Arkansas, 9783"
+    },
+    {
+    "index": 3,
+    "isActive": true,
+    "balance": "$1,934.58",
+    "name": "Burns Poole",
+    "gender": "male",
+    "phone": "+1 (885) 559-3422",
+    "address": "730 Seba Avenue, Osage, Alabama, 6290"
+    },
+    {
+    "index": 4,
+    "isActive": true,
+    "balance": "$3,261.65",
+    "name": "Mcfadden Horne",
+    "gender": "male",
+    "phone": "+1 (942) 565-3988",
+    "address": "120 Scholes Street, Kirk, Michigan, 1018"
+    },
+    {
+    "index": 5,
+    "isActive": false,
+    "balance": "$1,790.56",
+    "name": "Suzette Lewis",
+    "gender": "female",
+    "phone": "+1 (837) 586-3283",
+    "address": "314 Dunne Place, Bawcomville, Guam, 9053"
+    }
+    ]
+for(let key in users){
+    if (key == balance && users.balance >= 2000 ){
+
     }
 }
-console.log(strToArr);
