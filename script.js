@@ -390,7 +390,7 @@
 // 4) 
 // function summing(n){
 //    return function (num){
-//         return console.log(n = n + num)
+//        console.log(n += num)
 //     }
 // }
 // let sum = summing(0) 
@@ -408,85 +408,101 @@
 // Вивести масив телефонних номерів користувачів, у яких баланс більше 2000 доларів. 
 // І знайти суму всіх балансів користувачів
 
-let users = [
-    {
-    "index": 0,
-    "isActive": true,
-    "balance": "$2,226.60",
-    "name": "Eugenia Sawyer",
-    "gender": "female",
-    "phone": "+1 (840) 583-3207",
-    "address": "949 John Street, Rose, Puerto Rico, 1857"
-    },
-    {
-    "index": 1,
-    "isActive": true,
-    "balance": "$2,613.77",
-    "name": "Pauline Gallegos",
-    "gender": "female",
-    "phone": "+1 (985) 593-3328",
-    "address": "328 Greenpoint Avenue, Torboy, North Dakota, 6857"
-    },
-    {
-    "index": 2,
-    "isActive": false,
-    "balance": "$3,976.41",
-    "name": "Middleton Chaney",
-    "gender": "male",
-    "phone": "+1 (995) 591-2478",
-    "address": "807 Fleet Walk, Brutus, Arkansas, 9783"
-    },
-    {
-    "index": 3,
-    "isActive": true,
-    "balance": "$1,934.58",
-    "name": "Burns Poole",
-    "gender": "male",
-    "phone": "+1 (885) 559-3422",
-    "address": "730 Seba Avenue, Osage, Alabama, 6290"
-    },
-    {
-    "index": 4,
-    "isActive": true,
-    "balance": "$3,261.65",
-    "name": "Mcfadden Horne",
-    "gender": "male",
-    "phone": "+1 (942) 565-3988",
-    "address": "120 Scholes Street, Kirk, Michigan, 1018"
-    },
-    {
-    "index": 5,
-    "isActive": false,
-    "balance": "$1,790.56",
-    "name": "Suzette Lewis",
-    "gender": "female",
-    "phone": "+1 (837) 586-3283",
-    "address": "314 Dunne Place, Bawcomville, Guam, 9053"
-    }
-    ]
-balanceSum = 0
-needNumbr = [];
-for (let indx in users){
-    if (Number((users[indx].balance)
-        .replace(/[$\,]/g,"")) >= 2000) {
-        needNumbr.push(users[indx].phone)
-    }
-    balanceSum += Number((users[indx].balance).replace(/[$\,]/g,""))
-}
-console.log(needNumbr)
-console.log(balanceSum)
-// let str = "$Этот, текст, с, запятими"
-// str = str.replace(/,/g,"")
-// str = str.replace(/[$]/g,"")
-// console.log(str)
-// обратиться через цикл к масиву, обратиться и скопировать данные, задать условие и занести в новый масив, вывести.
-// обратиться через цикл к масиву, обратиться и убрать с помощью легурярных выражений $ и ,. посчитать общую сумму и вывести. 
-// func(count,min,max) - генерує масив довільною довжиною (count), і задається діапазон для рандому чисел від min до max 
+// let users = [
+//     {
+//     "index": 0,
+//     "isActive": true,
+//     "balance": "$2,226.60",
+//     "name": "Eugenia Sawyer",
+//     "gender": "female",
+//     "phone": "+1 (840) 583-3207",
+//     "address": "949 John Street, Rose, Puerto Rico, 1857"
+//     },
+//     {
+//     "index": 1,
+//     "isActive": true,
+//     "balance": "$2,613.77",
+//     "name": "Pauline Gallegos",
+//     "gender": "female",
+//     "phone": "+1 (985) 593-3328",
+//     "address": "328 Greenpoint Avenue, Torboy, North Dakota, 6857"
+//     },
+//     {
+//     "index": 2,
+//     "isActive": false,
+//     "balance": "$3,976.41",
+//     "name": "Middleton Chaney",
+//     "gender": "male",
+//     "phone": "+1 (995) 591-2478",
+//     "address": "807 Fleet Walk, Brutus, Arkansas, 9783"
+//     },
+//     {
+//     "index": 3,
+//     "isActive": true,
+//     "balance": "$1,934.58",
+//     "name": "Burns Poole",
+//     "gender": "male",
+//     "phone": "+1 (885) 559-3422",
+//     "address": "730 Seba Avenue, Osage, Alabama, 6290"
+//     },
+//     {
+//     "index": 4,
+//     "isActive": true,
+//     "balance": "$3,261.65",
+//     "name": "Mcfadden Horne",
+//     "gender": "male",
+//     "phone": "+1 (942) 565-3988",
+//     "address": "120 Scholes Street, Kirk, Michigan, 1018"
+//     },
+//     {
+//     "index": 5,
+//     "isActive": false,
+//     "balance": "$1,790.56",
+//     "name": "Suzette Lewis",
+//     "gender": "female",
+//     "phone": "+1 (837) 586-3283",
+//     "address": "314 Dunne Place, Bawcomville, Guam, 9053"
+//     }
+//     ]
+// balanceSum = 0
+// needNumbr = [];
+// for (let indx in users){
+//     if (Number((users[indx].balance).replace(/[$\,]/g,"")) >= 2000) {
+//         needNumbr.push(users[indx].phone)
+//     }
+//     balanceSum += Number((users[indx].balance).replace(/[$\,]/g,""))
+// }
+// console.log(needNumbr)
+// console.log(balanceSum)
+// ------------------------------------------
+
+// Завдання 8
+
+// 8) func(count,min,max) - генерує масив довільною довжиною (count), і задається діапазон для рандому чисел від min до max 
 // + вводить параметри користувач + робить сортування
 
+// function rand(min, max) {
+//     min = Math.ceil(min);
+//     max = Math.floor(max);
+//     return Math.floor(Math.random() * (max - min + 1)) + min;
+// }
+// function randomNum(count,min,max){
+//     let arr = []
+//     for (let i = 0; i < count; i++){
+//         arr.push(rand(min,max))
+//     }
+//     return arr
+// }
+// function normSort(a, b) {
+//     return a - b;
+// }
+// //((randomNum(count,min,max)).sort(normSort))
+// function func(){
+//     let count = prompt('Введіть бажану кількість рандомних чисел: ')
+//     let min = prompt('Введіть мінімальне число: ')
+//     let max = prompt('Введіть максимальне число: ')
+//     rand(min, max);
+//     return randomNum(count,min,max).sort(normSort);
+// }
 
-
-
-
-// func(3*,5*,100*) 
-// [50,35,90]
+// console.log(func())
