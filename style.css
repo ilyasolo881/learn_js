@@ -12,17 +12,10 @@ body{
     background-color: #cce7e8;
 }
 
-h1{
+.header__title{
     margin-top: 40px;
     font-size: 32px;
 }
-h2{
+.header__subtitle{
     font-size: 26px;
-}
-section{
-    height: 400px;
-
-    margin: 40px 0; 
-    padding: 20px;
-    background-color: #eeeee4
 }
