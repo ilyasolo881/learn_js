@@ -558,46 +558,46 @@
 // ------------------------------------------
 // 2)
 
-const arr3 = [1,1,1,2,2,3,3,4,4,4,5,5,5,5,5,5,5,5,0,0,0,0]
+// const arr3 = [1,1,1,2,2,3,3,4,4,4,5,5,5,5,5,5,5,5,0,0,0,0,0,0,0,0]
 
-function unicItem(arr){
-    let unicSet = new Set()
-    for (let item of arr){
-        unicSet.add(item)
-    }
-    return unicSet 
-}
+// function unicItem(arr){
+//     let unicSet = new Set()
+//     for (let item of arr){
+//         unicSet.add(item)
+//     }
+//     return unicSet 
+// }
 
-function unicCount(arr){
-    let countMap =  new Map()
-    let count = 0
-    for (let key of unicItem(arr)){
-        for (let item of arr){
-            if(key === item){
-                count ++
-            }
-        }   
-        countMap.set(key, count)
-        count = 0
-    }
-    return (countMap)
-}
+// function unicCount(arr){
+//     let countMap =  new Map()
+//     let count = 0
+//     for (let key of unicItem(arr)){
+//         for (let item of arr){
+//             if(key === item){
+//                 count ++
+//             }
+//         }   
+//         countMap.set(key, count)
+//         count = 0
+//     }
+//     return (countMap)
+// }
+// console.log(unicCount(arr3))
+// function commonNumber(number_map){
+//     let max = 0
+//     for (let amount of number_map.values()) {
+//         if(amount > max){
+//             max = amount   
+//         }
+//     }
+//     for (let amount of number_map.keys()){
+//         if(number_map.get(amount) === max){
+//             return amount;
+//         }
+//     }
+// }
 
-function commonNumber(number_map){
-    let max = 0
-    for (let amount of number_map.values()) {
-        if(amount > max){
-            max = amount   
-        }
-    }
-    for (let amount of number_map.keys()){
-        if(number_map.get(amount) === max){
-            return amount;
-        }
-    }
-}
-
-console.log(commonNumber(unicCount(arr3)))
+// console.log(commonNumber(unicCount(arr3)))
 // ------------------------------------------
 // 3) 
 // Error
@@ -605,3 +605,48 @@ console.log(commonNumber(unicCount(arr3)))
 // 4)
 
 // ------------------------------------------
+
+// function debounce(func, delay){
+//     let timer;
+
+//     return function(){
+//         clearTimeout(timer);
+//         timer = setTimeout(() => {
+//             func.apply(this, arguments);
+//         }, delay);
+//     }
+// }
+
+// const f = debounce(console.log, 0);
+
+// f(1);
+// f(2);
+// setTimeout(() => f(3), 100)
+// setTimeout(() => f(4), 500)
+// setTimeout(() => f(5), 1600)
+
+// function debounce(func, delay) {
+//     let isCooldown = false;
+  
+//     return function () {
+//       if (isCooldown) return;
+  
+//       func.apply(this, arguments);
+  
+//       isCooldown = true;
+  
+//       setTimeout(() => {
+//         isCooldown = false;
+//       }, delay);
+//     };
+//   }
+  
+//   let f = debounce(console.log, 1000);
+  
+//   f(1); // выполняется немедленно
+//   f(2); // проигнорирован
+  
+//   setTimeout( () => f(3), 100); // проигнорирован (прошло только 100 мс)
+//   setTimeout( () => f(4), 1100); // выполняется
+//   setTimeout( () => f(5), 1500); // проигнорирован (прошло только 400 мс от последнего вызова)
+  // ------------------------------------------
