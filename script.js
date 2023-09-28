@@ -604,8 +604,6 @@
 // ------------------------------------------
 // 4)
 
-// ------------------------------------------
-
 // function debounce(func, delay){
 //     let timer;
 
@@ -649,4 +647,43 @@
 //   setTimeout( () => f(3), 100); // проигнорирован (прошло только 100 мс)
 //   setTimeout( () => f(4), 1100); // выполняется
 //   setTimeout( () => f(5), 1500); // проигнорирован (прошло только 400 мс от последнего вызова)
-  // ------------------------------------------
+// ----------------------------------------------------------------
+// Завдання 10 
+// ----------------------------------------------------------------
+// 1)Проверьте что строка содержит все символы от "a" до "z" 
+// solution("wyyga") // false  
+// solution("qwertyuioplkjhgfdsazxcvbnm") // true  
+// solution("ejuxggfsts") // false  
+// solution("qpwoeirutyalskdjfhgmznxbcv") // true  
+// solution("qqqqqqqqpwoeirutyalskdjfhgmznxbcv") // true  
+// solution("0123456789abcdefghijklmnop") // false
+
+// let string1 = "wyyga"  
+// let string2 = "qwertyuioplkjhgfdsazxcvbnm"  // true  
+// let string3 = "ejuxggfsts"
+// let string4 = "qpwoeirutyalskdjfhgmznxbcv" // true  
+// let string5 = "qqqqqqqqpwoeirutyalskdjfhgmznxbcv" // true  
+// let string6 = "0123456789abcdefghijklmnop" 
+
+// function arrToString(str){
+//     return str.split('');
+// }
+
+// function isNeedLetters(str, etalon = "abcdefghijklmnopqrstuvwxyz"){
+//     const arrEtalon = arrToString(etalon);
+//     let arrStr = arrToString(str);
+//     let count = 0;
+
+//     for (let i = 0; i <= arrEtalon.length-1; i++){
+//         for (let j = 0; j <= arrStr.length-1; j++ ){
+//             if (arrStr[j] === arrEtalon[i]){
+//                 count++
+//                 break;
+//             }
+//         }
+//     }
+//     return count === arrEtalon.length? true : false;
+// }
+
+// console.log(isNeedLetters(string6, "01234343242521lmnop"))
+// ----------------------------------------------------------------
